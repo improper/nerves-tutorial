@@ -22,3 +22,23 @@ use Mix.Config
 config :bootloader,
   init: [:nerves_runtime],
   app: :fw
+
+# Configure these options using environmental variables
+# `export BRAINZ_WIFI_SSID=my_accesspoint_name`
+# `export BRAINZ_WIFI_PSK=secret`
+config :brainz_wifi, :wlan0,
+  ssid: System.get_env("BRAINZ_WIFI_SSID"),
+  key_mgmt: :"WPA-PSK",
+  psk: System.get_env("BRAINZ_WIFI_PSK")
+
+config :web, Web.Endpoint,
+  http: [port: 8080],
+  url: [host: "localhost", port: 8080],
+  secret_key_base: "79608276538942298466299274821",
+  root: Path.dirname(__DIR__),
+  server: true,
+  render_errors: [accepts: ~w(html json)],
+  pubsub: [name: Nerves.PubSub],
+  code_reloader: false
+
+config :logger, level: :debug

@@ -52,7 +52,8 @@ defmodule Fw.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   def deps do
-    [{:nerves, "~> 0.6", runtime: false}] ++
+    [ {:web, in_umbrella: true},
+      {:nerves, "~> 0.6", runtime: false} ] ++
     deps(@target)
   end
 
@@ -61,11 +62,12 @@ defmodule Fw.Mixfile do
   def deps(target) do
     [ system(target),
       {:bootloader, "~> 0.1"},
-      {:nerves_runtime, "~> 0.4"}
+      {:nerves_runtime, "~> 0.4"},
+      {:nerves_interim_wifi, "~> 0.2.0"},
     ]
   end
 
-  
+
   def system("rpi"), do: {:nerves_system_rpi, ">= 0.0.0", runtime: false}
   def system("rpi0"), do: {:nerves_system_rpi0, ">= 0.0.0", runtime: false}
   def system("rpi2"), do: {:nerves_system_rpi2, ">= 0.0.0", runtime: false}
@@ -75,6 +77,9 @@ defmodule Fw.Mixfile do
   def system("ev3"), do: {:nerves_system_ev3, ">= 0.0.0", runtime: false}
   def system("qemu_arm"), do: {:nerves_system_qemu_arm, ">= 0.0.0", runtime: false}
   def system(target), do: Mix.raise "Unknown MIX_TARGET: #{target}"
+
+  def kernel_modules("bbb"), do: ["wl18xx", "wlcore-sdio"]
+  def kernel_modules(_), do: []
 
   # We do not invoke the Nerves Env when running on the Host
   def aliases("host"), do: []

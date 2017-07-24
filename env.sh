@@ -1,0 +1,5 @@
+export MIX_TARGET=bbb
+export BRAINZ_WIFI_SSID=HAARP
+export BRAINZ_WIFI_PSK=KorovaMilkBar213
+export NERVES_WIFI_SSID=HAARP
+export NERVES_WIFI_PSK=KorovaMilkBar213 
