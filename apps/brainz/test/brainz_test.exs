@@ -1,6 +1,6 @@
-defmodule FwTest do
+defmodule BrainzTest do
   use ExUnit.Case
-  doctest Fw
+  doctest Brainz
 
   test "the truth" do
     assert 1 + 1 == 2

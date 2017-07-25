@@ -26,8 +26,8 @@ end
 # when running `mix release`, the first release in the file
 # will be used by default
 
-release :fw do
-  set version: current_version(:fw)
+release :brainz do
+  set version: current_version(:brainz)
   if System.get_env("NERVES_SYSTEM") do
     set dev_mode: false
     set include_src: false
@@ -36,4 +36,3 @@ release :fw do
     set vm_args: "rel/vm.args"
   end
 end
-

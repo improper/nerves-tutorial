@@ -21,7 +21,7 @@ use Mix.Config
 
 config :bootloader,
   init: [:nerves_runtime],
-  app: :fw
+  app: :brainz
 
 # Configure these options using environmental variables
 # `export BRAINZ_WIFI_SSID=my_accesspoint_name`

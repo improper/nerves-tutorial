@@ -1,4 +1,4 @@
-# Fw
+# Brainz Firmware
 
 ## Targets
 

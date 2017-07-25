@@ -1,4 +1,3 @@
-# Brainzfw
+# Brainz Firmware
 
 **TODO: Add description**
-

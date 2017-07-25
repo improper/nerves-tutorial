@@ -4,7 +4,7 @@
 ##  The cookie needs to be configured prior to vm boot for
 ##  for read only filesystem.
 
-# -name fw@0.0.0.0
+# -name brainz@0.0.0.0
 -setcookie 1mk0ulenVwtz4bktF15Xu2OH8xn0CjgC4Vp4KVU5QC/kIqsbXuEoF4nPTgB04zys
 
 ## Use Ctrl-C to interrupt the current shell rather than invoking the emulator's

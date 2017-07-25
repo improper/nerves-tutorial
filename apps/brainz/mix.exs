@@ -1,4 +1,4 @@
-defmodule Fw.Mixfile do
+defmodule Brainz.Mixfile do
   use Mix.Project
 
   @target System.get_env("MIX_TARGET") || "host"
@@ -10,7 +10,7 @@ defmodule Fw.Mixfile do
   """, :reset])
 
   def project do
-    [app: :fw,
+    [app: :brainz,
      version: "0.1.0",
      elixir: "~> 1.4.0",
      target: @target,
@@ -33,12 +33,12 @@ defmodule Fw.Mixfile do
   # Specify target specific application configurations
   # It is common that the application start function will start and supervise
   # applications which could cause the host to fail. Because of this, we only
-  # invoke Fw.start/2 when running on a target.
+  # invoke Brainz.start/2 when running on a target.
   def application("host") do
     [extra_applications: [:logger]]
   end
   def application(_target) do
-    [mod: {Fw.Application, []},
+    [mod: {Brainz.Application, []},
      extra_applications: [:logger]]
   end
 
