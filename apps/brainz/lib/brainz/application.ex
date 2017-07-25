@@ -26,9 +26,8 @@ defmodule Brainz.Application do
   end
 
   def init_network() do
-    Nerves.InterimWiFi.setup "wlan0", ssid: "", key_mgmt: :"WPA-PSK", psk: ""
-    # opts = Application.get_env(:brainz_wifi, @interface)
-    # Nerves.InterimWiFi.setup(@interface, opts)
+    opts = Application.get_env(:brainz, @interface)
+    Nerves.InterimWiFi.setup(@interface, opts)
   end
 
 end

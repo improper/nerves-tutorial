@@ -26,7 +26,7 @@ config :bootloader,
 # Configure these options using environmental variables
 # `export BRAINZ_WIFI_SSID=my_accesspoint_name`
 # `export BRAINZ_WIFI_PSK=secret`
-config :brainz_wifi, :wlan0,
+config :brainz, :wlan0,
   ssid: System.get_env("BRAINZ_WIFI_SSID"),
   key_mgmt: :"WPA-PSK",
   psk: System.get_env("BRAINZ_WIFI_PSK")
