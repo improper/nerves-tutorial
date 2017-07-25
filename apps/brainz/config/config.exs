@@ -41,4 +41,9 @@ config :web, Web.Endpoint,
   pubsub: [name: Nerves.PubSub],
   code_reloader: false
 
-config :logger, level: :debug
+config :logger,
+  backends: [ :console,
+              {LoggerMulticastBackend,
+                target: {{192,168,213,95}, 514},
+                level: :debug}
+            ]

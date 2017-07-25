@@ -5,6 +5,7 @@
   "elixir_make": {:hex, :elixir_make, "0.4.0", "992f38fabe705bb45821a728f20914c554b276838433349d4f2341f7a687cddf", [:mix], [], "hexpm"},
   "fs": {:hex, :fs, "0.9.2", "ed17036c26c3f70ac49781ed9220a50c36775c6ca2cf8182d123b6566e49ec59", [:rebar], [], "hexpm"},
   "gettext": {:hex, :gettext, "0.13.1", "5e0daf4e7636d771c4c71ad5f3f53ba09a9ae5c250e1ab9c42ba9edccc476263", [:mix], [], "hexpm"},
+  "logger_multicast_backend": {:hex, :logger_multicast_backend, "0.2.2", "709da981b467591d88c64e7635e597e07984fda1850736cdf888a046999b1ee3", [:mix], [], "hexpm"},
   "mime": {:hex, :mime, "1.1.0", "01c1d6f4083d8aa5c7b8c246ade95139620ef8effb009edde934e0ec3b28090a", [:mix], [], "hexpm"},
   "nerves": {:hex, :nerves, "0.6.1", "721d978da4a1c732270b59c13093d7e1806203290ed5703120871a535749c0f7", [:mix], [{:distillery, "~> 1.2", [hex: :distillery, repo: "hexpm", optional: false]}], "hexpm"},
   "nerves_interim_wifi": {:hex, :nerves_interim_wifi, "0.2.0", "d8fa51dfcdaf06c2d453de03ef22e7a3ca673412718b1c988b5742fb1629d8cc", [:make, :mix], [{:elixir_make, "~> 0.3", [hex: :elixir_make, repo: "hexpm", optional: false]}, {:nerves_network_interface, "~> 0.4.0", [hex: :nerves_network_interface, repo: "hexpm", optional: false]}, {:nerves_wpa_supplicant, "~> 0.3.0", [hex: :nerves_wpa_supplicant, repo: "hexpm", optional: false]}], "hexpm"},

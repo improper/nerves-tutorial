@@ -39,7 +39,7 @@ defmodule Brainz.Mixfile do
   end
   def application(_target) do
     [mod: {Brainz.Application, []},
-     extra_applications: [:logger]]
+     extra_applications: [:logger, :runtime_tools]]
   end
 
   # Dependencies can be Hex packages:
@@ -63,7 +63,9 @@ defmodule Brainz.Mixfile do
     [ system(target),
       {:bootloader, "~> 0.1"},
       {:nerves_runtime, "~> 0.4"},
-      {:nerves_interim_wifi, "~> 0.2.0"},
+
+      {:logger_multicast_backend, "~> 0.2.2"},
+      {:nerves_interim_wifi, "~> 0.2.0"}
     ]
   end
 
